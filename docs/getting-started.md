@@ -47,8 +47,8 @@ This checks whether dotnet, Azure CLI, GitHub CLI, and Copilot CLI are available
 ## Terminal Copilot examples
 
 ```bash
-gh copilot suggest "create a C# method to validate an email"
-gh copilot explain "dotnet test"
+copilot -i "create a C# method to validate an email"
+copilot -p "explain dotnet test"
 ```
 
 ## Safe prompting habits
