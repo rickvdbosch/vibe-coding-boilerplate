@@ -1,0 +1,33 @@
+{
+  "name": "vibe-coding-boilerplate",
+  "image": "mcr.microsoft.com/devcontainers/dotnet:1-8.0",
+  "features": {
+    "ghcr.io/devcontainers/features/azure-cli:1": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "dotnet.defaultSolution": "",
+        "editor.formatOnSave": true,
+        "github.copilot.enable": {
+          "*": true,
+          "plaintext": true,
+          "markdown": true,
+          "scminput": true
+        }
+      },
+      "extensions": [
+        "GitHub.copilot",
+        "GitHub.copilot-chat",
+        "ms-dotnettools.csharp",
+        "ms-dotnettools.csdevkit",
+        "ms-azuretools.vscode-azureappservice",
+        "ms-azuretools.vscode-azurefunctions",
+        "ms-vscode.azurecli"
+      ]
+    }
+  },
+  "postCreateCommand": "dotnet --info && az version && gh --version && (copilot --version || npm install -g @github/copilot) && copilot --version",
+  "remoteUser": "vscode"
+}
